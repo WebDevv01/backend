@@ -36,7 +36,9 @@ connectDB().then(async () => {
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:3001', // or use "*" for all origins (not recommended for production)
+  origin: 'http://localhost:3001', // or '*' to allow all
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
 }));
 app.options('*', cors()); // Handle preflight
