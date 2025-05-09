@@ -1,0 +1,30 @@
+{
+  "name": "gaterunner-backend",
+  "version": "1.0.0",
+  "description": "Backend for GateRunner - University Parcel Delivery System",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.5",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
+    "otp-generator": "^4.0.1",
+    "postmark": "^4.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
