@@ -35,7 +35,10 @@ connectDB().then(async () => {
 });
 
 // Middleware
-app.use(cors()); // Or use cors({ origin: '*', ... }) for explicit setup
+app.use(cors({
+  origin: 'http://localhost:3001', // or use "*" for all origins (not recommended for production)
+  credentials: true
+}));
 app.options('*', cors()); // Handle preflight
 app.use(express.json());
 app.use(morgan('dev'));
