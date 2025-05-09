@@ -35,10 +35,12 @@ connectDB().then(async () => {
 });
 
 // Middleware
-app.use(cors());
+app.use(cors()); // Or use cors({ origin: '*', ... }) for explicit setup
+app.options('*', cors()); // Handle preflight
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(logger);
+
 
 // Routes
 app.use('/api/auth', require('./routes/auth'));
